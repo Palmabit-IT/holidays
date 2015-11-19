@@ -1,5 +1,6 @@
-#Changelog
-All Notable changes to `:package_name` will be documented in this file
+# Changelog
+
+All Notable changes to `holidays` will be documented in this file
 
 ## NEXT - YYYY-MM-DD
 
@@ -12,7 +13,7 @@ All Notable changes to `:package_name` will be documented in this file
 ### Fixed
 - Nothing
 
-### Remove
+### Removed
 - Nothing
 
 ### Security

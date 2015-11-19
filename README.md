@@ -1,47 +1,98 @@
-# League Skeleton
+# Google Directions
 
-[![Latest Version](https://img.shields.io/github/release/thephpleague/skeleton.svg?style=flat-square)](https://github.com/thephpleague/skeleton/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/thephpleague/skeleton/master.svg?style=flat-square)](https://travis-ci.org/thephpleague/skeleton)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/thephpleague/skeleton.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpleague/skeleton/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/thephpleague/skeleton.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpleague/skeleton)
-[![Total Downloads](https://img.shields.io/packagist/dt/league/skeleton.svg?style=flat-square)](https://packagist.org/packages/league/skeleton)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
 
-**Note:** Replace `skeleton` with the correct package name in the above URLs, then delete this line.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Country holidays days.
+NOTE: Only italian holidays days are available for now.
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require league/skeleton
+$ composer require palmabit/holidays
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$year = 2025;
+
+/*
+ * Current year is set if no argument are passed.
+ */
+$holidays = new Palmabit\Holidays\Holidays($year);
 ```
+
+or
+
+``` php
+Holidays::setYear($year);
+$holidays = new Holidays();
+```
+
+then
+
+``` php
+$it_holidays = new Palmabit\Holidays\Holidays(2016);
+
+/*
+ * return an array of all italian holidays
+ */
+ $it_holidays = $holidays
+               ->setCountry('it_IT')
+               ->all();
+
+```
+
+
+
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Testing
 
 ``` bash
-$ phpunit
+$ composer test
 ```
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/thephpleague/:package_name/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## TODO
+* Improve coverage
+* Add other country holidays days
+
+## Security
+
+If you discover any security related issues, please email hello@palmabit.com instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](https://github.com/thephpleague/:package_name/contributors)
+- [Palmabit Srl][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/palmabit/holidays.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/Palmabit-IT/holidays/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/Palmabit-IT/holidays.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/Palmabit-IT/holidays.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/Palmabit-IT/holidays.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/palmabit/holidays
+[link-travis]: https://travis-ci.org/Palmabit-IT/holidays
+[link-scrutinizer]: https://scrutinizer-ci.com/g/Palmabit-IT/holidays/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/Palmabit-IT/holidays
+[link-author]: https://github.com/Palmabit-IT
+[link-contributors]: ../../contributors
