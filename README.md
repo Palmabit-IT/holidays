@@ -8,7 +8,7 @@
 
 
 Country holidays days.
-NOTE: Only italian holidays days are available for now.
+###### NOTE: Only italian holidays days are available for now.
 
 ## Install
 
@@ -32,14 +32,14 @@ $holidays = new Palmabit\Holidays\Holidays($year);
 or
 
 ``` php
-Holidays::setYear($year);
+Palmabit\Holidays\Holidays::setYear($year);
 $holidays = new Holidays();
 ```
 
 then
 
 ``` php
-$it_holidays = new Palmabit\Holidays\Holidays(2016);
+$holidays = new Palmabit\Holidays\Holidays(2016);
 
 /*
  * return an array of all italian holidays
