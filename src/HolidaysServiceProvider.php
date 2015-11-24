@@ -25,7 +25,6 @@ class HolidaysServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Nothing.
         $this->app->singleton('Palmabit\Holidays\Holidays', function ($app) {
             return new \Palmabit\Holidays\Holidays();
         });
