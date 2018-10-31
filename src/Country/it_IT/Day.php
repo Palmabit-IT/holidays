@@ -10,7 +10,7 @@ class Day extends Base
 
     public function getEasterDays()
     {
-      $easter_days[ Carbon::parse($this->year . '-03-21')->addDays(easter_days($this->year))->toDateString() ] = 'Pascqua';
+      $easter_days[ Carbon::parse($this->year . '-03-21')->addDays(easter_days($this->year))->toDateString() ] = 'Pasqua';
       $easter_days[ Carbon::parse($this->year . '-03-21')->addDays(easter_days($this->year)+1)->toDateString() ] = 'Lunedì dell\'angelo';
       return $easter_days;
     }
@@ -27,7 +27,7 @@ class Day extends Base
           '11-01' => 'Tutti Santi',
           '12-08' => 'Immacolata',
           '12-25' => 'Natale',
-          '12-26' => 'St. Stefano',
+          '12-26' => 'Santo Stefano',
         ];
     }
 }
